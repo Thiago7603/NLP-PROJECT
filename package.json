@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@nlpjs/basic": "^4.27.0",
-    "mongodb": "^6.10.0"
-  }
-}
