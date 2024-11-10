@@ -41,7 +41,7 @@ function Chat() {
   };
 
   const handleHelp = () => {
-    navigate('/ayuda'); 
+    navigate(''); 
   };
 
   const handleLogout = () => {
@@ -152,7 +152,7 @@ function Chat() {
             <img
               src={sendLogo}
               alt="LogoSend"
-              style={{ width: '57px', height: '57px',borderRadius: '30%', }}
+              style={{ width: '55px', height: '50px',borderRadius: '30%', }}
             />
           </Box>
         </Box>

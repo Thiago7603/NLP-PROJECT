@@ -26,7 +26,7 @@ function Home() {
   };
 
   const handleHelp = () => {
-    navigate('/ayuda'); 
+    navigate(''); 
   };
 
   const handleLogout = () => {
