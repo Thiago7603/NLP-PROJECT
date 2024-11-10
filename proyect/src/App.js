@@ -5,6 +5,7 @@ import Login from './views/Login';
 import Register from './views/Register';
 import Chat from './views/Chat';
 import Profile from './views/Profile';
+import Contraseña from './views/Contraseña';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/contraseña" element={<Contraseña />} />
       </Routes>
     </Router>
   );

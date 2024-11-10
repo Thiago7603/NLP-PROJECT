@@ -75,7 +75,7 @@ function Login() {
               href="#"
               variant="body2"
               sx={{ fontSize: '0.875rem', color: '#B560E1', textDecoration: 'none' }}
-              onClick={() => navigate('/forgot-password')} 
+              onClick={() => navigate('/contraseña')} 
             >
               ¿Olvidaste tu contraseña?
             </Link>
