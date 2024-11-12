@@ -249,7 +249,7 @@ function Chat() {
               },
             }} 
           >
-            Cerrar Sesión
+            Cerrar Chat
           </Button>
         </Box>
       </Drawer>
