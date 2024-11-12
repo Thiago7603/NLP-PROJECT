@@ -204,7 +204,7 @@ function Home() {
             },
           }} 
           >
-            Cerrar Sesión
+            Cerrar Chat
           </Button>
         </Box>
       </Drawer>
