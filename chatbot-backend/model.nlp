@@ -1,0 +1,367 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "engin,is,softwar,what": {
+            "intent": "software.engineering",
+            "domain": "default"
+          },
+          "design,is,softwar,what": {
+            "intent": "software.design",
+            "domain": "default"
+          },
+          "is,softwar,test,what": {
+            "intent": "software.testing",
+            "domain": "default"
+          },
+          "is,mainten,softwar,what": {
+            "intent": "software.maintenance",
+            "domain": "default"
+          },
+          "configur,is,manag,softwar,what": {
+            "intent": "software.configuration.management",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "software.engineering": "default",
+          "software.design": "default",
+          "software.testing": "default",
+          "software.maintenance": "default",
+          "software.configuration.management": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "What is software engineering?",
+            "intent": "software.engineering"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is software design?",
+            "intent": "software.design"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is software testing?",
+            "intent": "software.testing"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is software maintenance?",
+            "intent": "software.maintenance"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is software configuration management?",
+            "intent": "software.configuration.management"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "what": 1,
+              "is": 1,
+              "softwar": 1,
+              "engin": 1,
+              "design": 1,
+              "test": 1,
+              "mainten": 1,
+              "configur": 1,
+              "manag": 1
+            },
+            "intents": {
+              "software.engineering": 1,
+              "software.design": 1,
+              "software.testing": 1,
+              "software.maintenance": 1,
+              "software.configuration.management": 1
+            },
+            "intentFeatures": {
+              "software.engineering": {
+                "what": 1,
+                "is": 1,
+                "softwar": 1,
+                "engin": 1
+              },
+              "software.design": {
+                "what": 1,
+                "is": 1,
+                "softwar": 1,
+                "design": 1
+              },
+              "software.testing": {
+                "what": 1,
+                "is": 1,
+                "softwar": 1,
+                "test": 1
+              },
+              "software.maintenance": {
+                "what": 1,
+                "is": 1,
+                "softwar": 1,
+                "mainten": 1
+              },
+              "software.configuration.management": {
+                "what": 1,
+                "is": 1,
+                "softwar": 1,
+                "configur": 1,
+                "manag": 1
+              }
+            },
+            "featuresToIntent": {
+              "what": [
+                "software.engineering",
+                "software.design",
+                "software.testing",
+                "software.maintenance",
+                "software.configuration.management"
+              ],
+              "is": [
+                "software.engineering",
+                "software.design",
+                "software.testing",
+                "software.maintenance",
+                "software.configuration.management"
+              ],
+              "softwar": [
+                "software.engineering",
+                "software.design",
+                "software.testing",
+                "software.maintenance",
+                "software.configuration.management"
+              ],
+              "engin": [
+                "software.engineering"
+              ],
+              "design": [
+                "software.design"
+              ],
+              "test": [
+                "software.testing"
+              ],
+              "mainten": [
+                "software.maintenance"
+              ],
+              "configur": [
+                "software.configuration.management"
+              ],
+              "manag": [
+                "software.configuration.management"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "what",
+                "is",
+                "softwar",
+                "engin",
+                "design",
+                "test",
+                "mainten",
+                "configur",
+                "manag"
+              ],
+              "intents": [
+                "software.engineering",
+                "software.design",
+                "software.testing",
+                "software.maintenance",
+                "software.configuration.management"
+              ],
+              "perceptrons": [
+                [
+                  0.8478723764419556,
+                  0.8478723764419556,
+                  0.8478723764419556,
+                  11.14419937133789,
+                  -2.946362257003784,
+                  -2.9539549350738525,
+                  -2.9180562496185303,
+                  -1.4813059568405151,
+                  -1.4813059568405151,
+                  0.42273162490818633
+                ],
+                [
+                  0.8535508513450623,
+                  0.8535508513450623,
+                  0.8535508513450623,
+                  -2.8823986053466797,
+                  11.132875442504883,
+                  -2.9494643211364746,
+                  -2.953331232070923,
+                  -1.4953463077545166,
+                  -1.4953463077545166,
+                  0.4261440070336544
+                ],
+                [
+                  0.852051317691803,
+                  0.852051317691803,
+                  0.852051317691803,
+                  -2.930246353149414,
+                  -2.8785054683685303,
+                  11.141138076782227,
+                  -2.939455986022949,
+                  -1.5362664461135864,
+                  -1.5362664461135864,
+                  0.4265320861381252
+                ],
+                [
+                  0.8522276282310486,
+                  0.8522276282310486,
+                  0.8522276282310486,
+                  -2.9499101638793945,
+                  -2.9350638389587402,
+                  -2.8804409503936768,
+                  11.141886711120605,
+                  -1.5161269903182983,
+                  -1.5161269903182983,
+                  0.4288388819637331
+                ],
+                [
+                  0.4165252149105072,
+                  0.4165252149105072,
+                  0.4165252149105072,
+                  -1.514366626739502,
+                  -1.5364692211151123,
+                  -1.4847594499588013,
+                  -1.4534327983856201,
+                  6.412489414215088,
+                  6.412489414215088,
+                  0.20830404284413373
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "What is software engineering?"
+      ],
+      [
+        "en",
+        "What is software design?"
+      ],
+      [
+        "en",
+        "What is software testing?"
+      ],
+      [
+        "en",
+        "What is software maintenance?"
+      ],
+      [
+        "en",
+        "What is software configuration management?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "software.engineering": [
+          {
+            "answer": "Software engineering is the application of engineering to the development of software in a systematic method."
+          }
+        ],
+        "software.design": [
+          {
+            "answer": "Software design is the process of defining the architecture, components, interfaces, and other characteristics of a system or component."
+          }
+        ],
+        "software.testing": [
+          {
+            "answer": "Software testing is the process of evaluating a system or its components with the intent to find whether it satisfies the specified requirements or to identify defects."
+          }
+        ],
+        "software.maintenance": [
+          {
+            "answer": "Software maintenance is the modification of a software product after delivery to correct faults, improve performance or other attributes, or adapt to a changed environment."
+          }
+        ],
+        "software.configuration.management": [
+          {
+            "answer": "Software configuration management is the process of identifying and defining the items in the system, controlling the changes of these items throughout their lifecycle, and recording and reporting the status of these items and change requests."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
