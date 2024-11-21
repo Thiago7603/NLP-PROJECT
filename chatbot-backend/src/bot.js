@@ -10,7 +10,7 @@ const manager = new NlpManager({ languages: ['en'] });
 // Agregar documentos y respuestas basadas en el contenido del libro
 // Aquí puedes personalizar los intents y respuestas según el contenido
 manager.addDocument('en', 'What is software engineering?', 'software.engineering');
-manager.addAnswer('en', 'software.engineering', 'Software engineering is the application of engineering to the development of software in a systematic method.');
+manager.addAnswer('en', 'software.engineering', 'Oh, software engineering? It’s basically applying engineering principles to software development. Think of it as building software in a very systematic way.');
 
 manager.addDocument('en', 'What is software design?', 'software.design');
 manager.addAnswer('en', 'software.design', 'Software design is the process of defining the architecture, components, interfaces, and other characteristics of a system or component.');
